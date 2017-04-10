@@ -6,8 +6,7 @@ var topball;
 var twist;
 var twistgif;
 
-function setup() {
-  createCanvas(600, 800);
+function preload() {
   back = loadImage("Files/Background.png");
   frame = loadImage("Files/Frame.png");
   twist = loadImage("Files/Top Tile.png");
@@ -15,6 +14,11 @@ function setup() {
   bottomball = loadGif('Files/Balls-Bottom.gif');
   topball = loadGif('Files/Balls-Top.gif');
   twistgif = loadGif('Files/Tile.gif');
+
+}
+
+function setup() {
+  createCanvas(600, 800);
 
 }
 
@@ -49,7 +53,7 @@ function mousePressed() {
     topball.play();
   }
   if (bottomball.playing()) {
-    topball.pause();
+    bottomball.pause();
   } else {
     bottomball.play();
   }
