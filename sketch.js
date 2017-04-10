@@ -30,7 +30,7 @@ function draw() {
     image(topball, 0, 0, 600, 800);
   }
   if (bottomball.playing()) {
-    image(topball, 0, 0, 600, 800);
+    image(bottomball, 0, 0, 600, 800);
   }
 
 
